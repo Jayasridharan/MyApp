@@ -20,10 +20,19 @@ import data from './data.json';
 function App() {
   const [ toDoList, setToDoList ] = useState(data);
  
- 
+ console.log('toDoList',toDoList.task)
+ const newList = data.map(object => {
+let copyData = {...object};
+return (
+  <div><ul>
+    {copyData.task}
+    </ul></div>
+  )
+ });
  return (
    <div className="App">
      <Header />
+     <div>{newList}</div>
    </div>
  );
 }
