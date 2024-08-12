@@ -14,9 +14,16 @@ return(
         }}>
                  X
                 </span>
+                <span className="close" onClick={()=>{
+                  props.onClickEdit(props.index)
+                }}
+                >Edit </span>
                 </li>
+                
             </ul>
   </div>
+    
+  
     
 )
 }
